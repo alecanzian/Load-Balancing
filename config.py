@@ -19,7 +19,7 @@ OUTPUT_DIR = "output"
 # (fix alpha, vary lambda; fix lambda, vary alpha)
 # ==============================================
 
-SIM1_N_JOBS      = 2000
+SIM1_N_JOBS      = 50000
 SIM1_FIXED_ALPHA = 1.3                                  # used while lambda varies
 SIM1_FIXED_LOAD  = 0.3                                  # used while alpha varies
 SIM1_ALPHAS      = [1.1, 1.3, 1.5, 1.7, 1.9, 2.0, 2.5]
@@ -30,7 +30,7 @@ SIM1_STRATEGIES  = ["random", "jsq", "power_of_two", "age_aware_jsq"]
 # SIMULATION 2 — full (alpha, lambda) grid
 # ==============================================
 
-SIM2_N_JOBS     = 2000
+SIM2_N_JOBS     = 50000
 SIM2_ALPHAS     = [1.1, 1.3, 1.5, 1.8]
 SIM2_LOAD_RATES = [0.3, 0.6, 0.8]
 SIM2_STRATEGIES = ["random", "jsq", "age_aware_jsq", "age_aware_empirical_jsq"]
