@@ -36,9 +36,8 @@ Dispatcher (Poisson arrivals)
 ├──── queue[0] ───► Server 0 ───► result_queue[0]
 ├──── queue[1] ───► Server 1 ───► result_queue[1]
 └──── queue[2] ───► Server 2 ───► result_queue[2]
-
+```
 All queues are backed by a single shared `multiprocessing.Manager`, so `qsize()` works on both Linux and macOS.
----
 
 ## Service Time Distribution
 
