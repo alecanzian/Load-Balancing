@@ -4,6 +4,7 @@ A Python simulation of a multi-server load balancing system under heavy-tailed w
 
 ## Project Structure
 
+```
 LoadBalancing/
 ├── main.py             # Entry point — runs simulation 1, 2, or both (CLI)
 ├── config.py           # All simulation constants and parameter grids
@@ -18,7 +19,7 @@ LoadBalancing/
 └── sim2/
 ├── data/
 └── plots/
-
+```
 ---
 
 ## Architecture
@@ -29,15 +30,14 @@ The system simulates an **open queueing network** with:
 - **3 servers** — independent `multiprocessing.Process` instances, each with its own FIFO inbound queue and result queue
 - **FCFS scheduling** at each server
 
+```
 Dispatcher (Poisson arrivals)
 │
 ├──── queue[0] ───► Server 0 ───► result_queue[0]
 ├──── queue[1] ───► Server 1 ───► result_queue[1]
 └──── queue[2] ───► Server 2 ───► result_queue[2]
-
+```
 All queues are backed by a single shared `multiprocessing.Manager`, so `qsize()` works on both Linux and macOS.
-
----
 
 ## Service Time Distribution
 
