@@ -3,8 +3,8 @@
 A Python simulation of a multi-server load balancing system under heavy-tailed workloads, developed as a university project for the Software Performance and Scalability course.
 
 ## Project Structure
-```
 
+```
 LoadBalancing/
 ├── main.py             # Entry point — runs simulation 1, 2, or both (CLI)
 ├── config.py           # All simulation constants and parameter grids
@@ -19,7 +19,7 @@ LoadBalancing/
 └── sim2/
 ├── data/
 └── plots/
-
+```
 ---
 
 ## Architecture
