@@ -58,10 +58,10 @@ def plot_response_time_cdf(all_results, alpha, load, out_dir, time_unit,
         sorted_times = np.sort(data["response_times"]) * scale
         cdf = np.arange(1, len(sorted_times) + 1) / len(sorted_times)
         ax.plot(sorted_times, cdf, label=name, color=color, linewidth=2)
-
     ax.set_xscale('log')
     _log_axis(ax.xaxis)
     ax.tick_params(axis='x', which='both', rotation=45, labelsize=7)
+    ax.grid(True, which='both', axis='both', alpha=0.3)   # add this
     ax.set_xlabel(f"Response time ({time_unit}) — log scale")
     ax.set_ylabel("Fraction of jobs completed (CDF)")
     ax.set_title(f"Response time CDF — α={alpha}, λ={load} — {_sim_info(n_jobs, base_work)}")
@@ -90,6 +90,7 @@ def plot_server_loads(all_results, alpha, load, out_dir, n_jobs, base_work, stra
     ax.yaxis.set_major_locator(matplotlib.ticker.MultipleLocator(0.1))
     ax.yaxis.set_minor_locator(matplotlib.ticker.MultipleLocator(0.02))
     ax.tick_params(axis='y', which='minor', labelsize=7)
+    ax.grid(True, which='both', axis='y', alpha=0.3) 
     ax.legend()
     fig.tight_layout()
     fname = (f"server_loads_alpha{str(alpha).replace('.', '_')}"
