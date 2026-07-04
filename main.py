@@ -157,15 +157,15 @@ def run_sim2():
 # simulation 3 — fine tuning age weight
 # ----------------------------------------------------
 
-def run_sim3():
-    _, plots_dir, results_file = sim_paths("sim3")
-    points = [(1.1,0.8)]
-    all_results = run_grid(points, ["age_aware_jsq", "age_aware_empirical_jsq"], SIM2_N_JOBS, results_file)
-
-    for alpha, load in points:
-        plot_response_time_cdf(all_results, alpha, load, plots_dir, SCALE_LABEL,
-                           SIM2_N_JOBS, BASE_WORK,
-                           strategies=["age_aware_jsq", "age_aware_empirical_jsq"])
+#def run_sim3():
+#    _, plots_dir, results_file = sim_paths("sim3")
+#    points = [(1.1,0.8)]
+#    all_results = run_grid(points, ["age_aware_jsq", "age_aware_empirical_jsq"], SIM2_N_JOBS, results_file)
+#
+#    for alpha, load in points:
+#        plot_response_time_cdf(all_results, alpha, load, plots_dir, SCALE_LABEL,
+#                           SIM2_N_JOBS, BASE_WORK,
+#                           strategies=["age_aware_jsq", "age_aware_empirical_jsq"])
         
 
 # ----------------------------------------------------
@@ -182,7 +182,7 @@ def main():
         run_sim1()
     if args.simulation in ("sim2", "all"):
         run_sim2()
-        run_sim3()
+        #run_sim3()
 
 
 if __name__ == "__main__":
