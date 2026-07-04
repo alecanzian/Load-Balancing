@@ -109,13 +109,13 @@ All parameters are defined in `config.py`:
 | `BASE_WORK` | `3000` | CPU iterations per unit of job size — controls server speed |
 | `SCALE_LABEL` | `'ms'` | Human-readable label for TIME_SCALE, used in plot axes |
 | `OUTPUT_DIR` | `'output'` | Root directory for all results |
-| `SIM1_N_JOBS` | `50000` | Jobs per experiment (simulation 1) |
+| `SIM1_N_JOBS` | `20000` | Jobs per experiment (simulation 1) |
 | `SIM1_FIXED_ALPHA` | `1.3` | α held fixed while λ varies (simulation 1) |
 | `SIM1_FIXED_LOAD` | `0.3` | λ held fixed while α varies (simulation 1) |
 | `SIM1_ALPHAS` | `[1.1 … 2.5]` | α sweep values (simulation 1) |
 | `SIM1_LOAD_RATES` | `[0.1 … 0.9]` | λ sweep values (simulation 1) |
 | `SIM1_STRATEGIES` | see config | Strategies run in simulation 1 |
-| `SIM2_N_JOBS` | `50000` | Jobs per experiment (simulation 2) |
+| `SIM2_N_JOBS` | `20000` | Jobs per experiment (simulation 2) |
 | `SIM2_ALPHAS` | `[1.1, 1.3, 1.5, 1.8]` | α grid values (simulation 2) |
 | `SIM2_LOAD_RATES` | `[0.3, 0.6, 0.8]` | λ grid values (simulation 2) |
 | `SIM2_STRATEGIES` | see config | Strategies run in simulation 2 |
